@@ -14,6 +14,7 @@
 		05CA6EC927E0390A0059C294 /* JsonPostAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CA6EC827E0390A0059C294 /* JsonPostAppTests.swift */; };
 		05CA6ED327E0390A0059C294 /* JsonPostAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CA6ED227E0390A0059C294 /* JsonPostAppUITests.swift */; };
 		05CA6ED527E0390A0059C294 /* JsonPostAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CA6ED427E0390A0059C294 /* JsonPostAppUITestsLaunchTests.swift */; };
+		05CA6EE527E03A200059C294 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CA6EE427E03A200059C294 /* PostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		05CA6ECE27E0390A0059C294 /* JsonPostAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JsonPostAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CA6ED227E0390A0059C294 /* JsonPostAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonPostAppUITests.swift; sourceTree = "<group>"; };
 		05CA6ED427E0390A0059C294 /* JsonPostAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonPostAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		05CA6EE427E03A200059C294 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,9 @@
 		05CA6EB627E039080059C294 /* JsonPostApp */ = {
 			isa = PBXGroup;
 			children = (
+				05CA6EE327E039760059C294 /* Model */,
+				05CA6EE227E039710059C294 /* View */,
+				05CA6EE127E0396B0059C294 /* ViewModel */,
 				05CA6EB727E039080059C294 /* JsonPostAppApp.swift */,
 				05CA6EB927E039080059C294 /* ContentView.swift */,
 				05CA6EBB27E0390A0059C294 /* Assets.xcassets */,
@@ -125,6 +130,28 @@
 				05CA6ED427E0390A0059C294 /* JsonPostAppUITestsLaunchTests.swift */,
 			);
 			path = JsonPostAppUITests;
+			sourceTree = "<group>";
+		};
+		05CA6EE127E0396B0059C294 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		05CA6EE227E039710059C294 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				05CA6EE427E03A200059C294 /* PostView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		05CA6EE327E039760059C294 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05CA6EBA27E039080059C294 /* ContentView.swift in Sources */,
+				05CA6EE527E03A200059C294 /* PostView.swift in Sources */,
 				05CA6EB827E039080059C294 /* JsonPostAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

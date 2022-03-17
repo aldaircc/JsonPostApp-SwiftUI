@@ -12,4 +12,9 @@ struct PostModel:Codable, Identifiable {
     let id:Int
     let title:String
     let body:String
+    var isFavorite:Bool?
+    
+    mutating func setFavorite(status: Bool) {
+        self.isFavorite = status
+    }
 }

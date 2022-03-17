@@ -9,15 +9,22 @@ import SwiftUI
 
 struct PostView: View {
     // MARK: - Variables
-    private var postVM = PostViewModel()
+    @StateObject var postVM = PostViewModel()
     @State var postsData:[PostModel] = []
-    
     @State private var tabSelected:Int = 1
     
     @ViewBuilder
     func generateText(text:String) -> some View {
         Text(text)
             .foregroundColor(.red)
+    }
+    
+    var posts:[PostModel] {
+        if tabSelected == 2 {
+            return postVM.posts.filter { $0.isFavorite == true }
+        } else {
+            return postVM.posts
+        }
     }
     
     var body: some View {
@@ -31,7 +38,7 @@ struct PostView: View {
                 .pickerStyle(.segmented)
                 .padding()
                 
-                List(postsData, id: \.id) { post in
+                List(posts, id: \.id) { post in
                     PostRow(post: post)
                         .swipeActions(content: {
                             Button(action: { }) {
@@ -73,7 +80,8 @@ struct PostView: View {
 //            .ignoresSafeArea(edges: .top)
         }
         .onAppear {
-            self.postsData = self.postVM.getPost() ?? []
+//            self.postsData = self.postVM.getPost() ?? []
+            self.postVM.loadPosts()
         }
     }
 }

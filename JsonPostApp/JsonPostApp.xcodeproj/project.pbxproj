@@ -19,6 +19,7 @@
 		05CB1A8427E1623D002442AD /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 05CB1A8327E1623D002442AD /* posts.json */; };
 		05CB1A8627E162CD002442AD /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB1A8527E162CD002442AD /* PostModel.swift */; };
 		05CB1A8827E16379002442AD /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB1A8727E16379002442AD /* PostViewModel.swift */; };
+		05CB311627E2BC5400BE178B /* PostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB311527E2BC5400BE178B /* PostRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		05CB1A8327E1623D002442AD /* posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = posts.json; path = ../../../../../../Downloads/posts.json; sourceTree = "<group>"; };
 		05CB1A8527E162CD002442AD /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		05CB1A8727E16379002442AD /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		05CB311527E2BC5400BE178B /* PostRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				05CB1A8027E15AE4002442AD /* SegmentedControlView.swift */,
+				05CB311527E2BC5400BE178B /* PostRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05CB1A8827E16379002442AD /* PostViewModel.swift in Sources */,
+				05CB311627E2BC5400BE178B /* PostRow.swift in Sources */,
 				05CA6EBA27E039080059C294 /* ContentView.swift in Sources */,
 				05CB1A8627E162CD002442AD /* PostModel.swift in Sources */,
 				05CB1A8127E15AE4002442AD /* SegmentedControlView.swift in Sources */,

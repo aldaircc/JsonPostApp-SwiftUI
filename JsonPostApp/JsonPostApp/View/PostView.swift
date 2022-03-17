@@ -20,10 +20,6 @@ struct PostView: View {
             .foregroundColor(.red)
     }
     
-    init() {
-        
-    }
-    
     var body: some View {
         NavigationView {
             VStack {
@@ -36,17 +32,22 @@ struct PostView: View {
                 .padding()
                 
                 List(postsData, id: \.id) { post in
-                    HStack(alignment: .center, spacing: 10) {
-                        Image(systemName: "circle.fill")
-                            .resizable()
-                            .frame(width: 10, height: 10)
-                            .foregroundColor(.blue)
-                        Text(post.title)
-                    }
+                    PostRow(post: post)
+                        .swipeActions(content: {
+                            Button(action: { }) {
+                                Image(systemName: "trash")
+                            }
+                            .tint(.red)
+                        })
                 }
+                .listStyle(.grouped)
                 
+                .refreshable {
+                    print("Refresh")
+                }
+
                 Spacer()
-                
+
                 Button(action: {}) {
                     Text("Delete All")                    .frame(maxWidth: .infinity)
                 }
@@ -65,12 +66,11 @@ struct PostView: View {
                         print("Refresh data")
                     }) {
                         Image(systemName: "arrow.clockwise")
-//                            .tint(.white)
                     }
                 }
             })
             .navigationBarHidden(false)
-            .ignoresSafeArea(edges: .top)
+//            .ignoresSafeArea(edges: .top)
         }
         .onAppear {
             self.postsData = self.postVM.getPost() ?? []

@@ -11,7 +11,8 @@ import SwiftUI
 struct JsonPostAppApp: App {
     var body: some Scene {
         WindowGroup {
-            PostView()
+            //PostView()
+            AsyncPostView()
         }
     }
 }

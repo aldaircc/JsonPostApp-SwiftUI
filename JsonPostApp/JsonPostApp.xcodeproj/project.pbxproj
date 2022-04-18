@@ -10,6 +10,7 @@
 		05B17977280BAC6D0097AB66 /* AsyncPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B17976280BAC6D0097AB66 /* AsyncPostView.swift */; };
 		05B17979280BACE70097AB66 /* AsyncPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B17978280BACE70097AB66 /* AsyncPostViewModel.swift */; };
 		05B1797C280BAD890097AB66 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B1797B280BAD890097AB66 /* WebService.swift */; };
+		05BD93EA280CE7D3001FBA8B /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD93E9280CE7D3001FBA8B /* CommentModel.swift */; };
 		05CA6EB827E039080059C294 /* JsonPostAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CA6EB727E039080059C294 /* JsonPostAppApp.swift */; };
 		05CA6EBA27E039080059C294 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CA6EB927E039080059C294 /* ContentView.swift */; };
 		05CA6EBC27E0390A0059C294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CA6EBB27E0390A0059C294 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		05B17976280BAC6D0097AB66 /* AsyncPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncPostView.swift; sourceTree = "<group>"; };
 		05B17978280BACE70097AB66 /* AsyncPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncPostViewModel.swift; sourceTree = "<group>"; };
 		05B1797B280BAD890097AB66 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		05BD93E9280CE7D3001FBA8B /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		05CA6EB427E039080059C294 /* JsonPostApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JsonPostApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CA6EB727E039080059C294 /* JsonPostAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonPostAppApp.swift; sourceTree = "<group>"; };
 		05CA6EB927E039080059C294 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				05CB1A8527E162CD002442AD /* PostModel.swift */,
+				05BD93E9280CE7D3001FBA8B /* CommentModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				05CB1A8627E162CD002442AD /* PostModel.swift in Sources */,
 				05CB1A8127E15AE4002442AD /* SegmentedControlView.swift in Sources */,
 				05B17977280BAC6D0097AB66 /* AsyncPostView.swift in Sources */,
+				05BD93EA280CE7D3001FBA8B /* CommentModel.swift in Sources */,
 				05CA6EE527E03A200059C294 /* PostView.swift in Sources */,
 				05B1797C280BAD890097AB66 /* WebService.swift in Sources */,
 				05CA6EB827E039080059C294 /* JsonPostAppApp.swift in Sources */,

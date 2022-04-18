@@ -23,8 +23,19 @@ struct AsyncPostView: View {
                 .pickerStyle(.segmented)
                 
                 List(asyncPostVM.posts, id: \.id) { post in
-                    Text(post.post.title)
+                    
+                    Button(action: {
+                        
+                        Task {
+                            await asyncPostVM.getCommentBy(postId: post.id)
+                        }
+                        
+                    }) {
+                        Text(post.post.title)
+                        
+                    }
                 }
+                
             }
         }
         .task {

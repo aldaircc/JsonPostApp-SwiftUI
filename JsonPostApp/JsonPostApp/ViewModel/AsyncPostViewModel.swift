@@ -9,6 +9,7 @@ import Foundation
 
 enum NetworkError: Error {
     case badURL
+    case errorConverting
 }
 
 @MainActor
@@ -16,6 +17,7 @@ class AsyncPostViewModel: ObservableObject {
 
     // MARK: - Properties
     @Published var posts: [PostItemViewModel] = []
+    @Published var comments: [CommentItemViewModel] = []
     
     // MARK: - Methods
     func getPosts() async {
@@ -32,6 +34,19 @@ class AsyncPostViewModel: ObservableObject {
         }
     }
     
+    func getCommentBy(postId: Int) async {
+        do {
+            let comments = try await WebService().getCommentsBy(postId: postId)
+            self.comments = comments.map(CommentItemViewModel.init)
+        /*: Using continuation to consume callback method and call it from async function
+         let comments = try await WebService().getCommentsByFromCallBack(postId: postId)
+         self.comments = comments.map(CommentItemViewModel.init)
+         */
+        } catch {
+            print(error)
+        }
+    }
+    
 }
 
 struct PostItemViewModel: Identifiable {
@@ -39,5 +54,13 @@ struct PostItemViewModel: Identifiable {
     
     var id: Int {
         post.id
+    }
+}
+
+struct CommentItemViewModel: Identifiable {
+    let comment: CommentModel
+    
+    var id: Int {
+        comment.id
     }
 }

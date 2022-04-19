@@ -22,13 +22,15 @@ class AsyncPostViewModel: ObservableObject {
     // MARK: - Methods
     func getPosts() async {
         do {
+            WebService().consumeTermnsAndConditions()
+            /*:
             guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else {
                 throw NetworkError.badURL
             }
             
             let posts = try await WebService().getPost(url: url)
             self.posts = posts.map(PostItemViewModel.init)
-            
+            */
         } catch {
             print(error)
         }
